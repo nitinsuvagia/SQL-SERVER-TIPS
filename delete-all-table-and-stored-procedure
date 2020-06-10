@@ -4,7 +4,7 @@ use [database_name]
 -- drop all tables
 EXEC sp_MSforeachtable @Command1 = "DROP TABLE ?"
 
-use [StrataProcessingNew]
+use [database_name]
 -- drop all user defined stored procedures
 Declare @procname varchar(500)
 Declare cur Cursor For Select [name] From sys.objects where type = 'p'
