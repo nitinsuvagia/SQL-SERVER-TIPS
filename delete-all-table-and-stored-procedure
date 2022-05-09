@@ -1,11 +1,11 @@
-Database Table & Stored Procedure Delete All (Clean Database)
+##Database Table & Stored Procedure Delete All (Clean Database)
 
 use [database_name]
 -- drop all tables
 EXEC sp_MSforeachtable @Command1 = "DROP TABLE ?"
 
 use [database_name]
--- drop all user defined stored procedures
+###drop all user defined stored procedures
 Declare @procname varchar(500)
 Declare cur Cursor For Select [name] From sys.objects where type = 'p'
 Open cur
